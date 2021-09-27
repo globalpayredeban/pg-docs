@@ -23,10 +23,15 @@ Para ver ejemplos prácticos del uso del SDK de Payment Gateway JS, consulte lo 
 Nuestra biblioteca le permite implementar de la manera fácil un formulario para tokenizar tarjetas con nosotros. Dicho formulario es dinámico y responde para cada tarjeta, es decir, implemente este formulario para cualquier tipo de tarjeta que admitamos.
 
 Para realizar la implementación siga los siguientes pasos:
+
 1. Cree un elemento para contener el formulario dinamico.
+
 2. Cree una instancia de [PaymentGateway](#Clase-PaymentGateway) con los parámetros requeridos.
+
 3. Genere la referencia de tokenización con los datos requeridos. [generate_tokenize](#Función-generate-tokenize)
+
 4. Defina el evento para ejecutar la acción para tokenizar [tokenize](#Función-tokenize).
+
 Solo necesita crear un contenedor y declararlo cuando requiera que se inserte un formulario dinámico con todas las validaciones requeridas para capturar los datos sensibles.
 ```html
 <!-- 1. Create an element to contain the dynamic form. -->
@@ -87,7 +92,7 @@ Solo necesita crear un contenedor y declararlo cuando requiera que se inserte un
 Contiene todas las funciones para conectarse con la pasarela de pago y debe tener una instancia con los siguientes parámetros:
 
 | Field              | Description                        | Type   | Required |
-| :----------------- | :--------------------------------- |:------ | :------- |
+| :----------------- | :--------------------------------- |:------: | :-------: |
 | Environment        | Ambiente a utilizar (stg, prod) | String |     X    |
 | Application Code   | Proporcionado por la pasarela de pago    | String |     X    |
 | Application Key    | Proporcionado por la pasarela de pago    | String |     X    |
@@ -99,7 +104,7 @@ Ejecute esta función para generar el formulario dinámico e insértelo dentro d
 Use los siguientes parametros:
 
 | Campo                       | Descripción                                                                                          | Tipo     | Requerido |
-| :-------------------------- | :--------------------------------------------------------------------------------------------------- |:-------- | :------- |
+| :-------------------------- | :--------------------------------------------------------------------------------------------------- |:--------: | :-------: |
 | [Tokenize data](#Datos-para-tokenizar)|                                                                                                   | Object   |     X    |
 | Container query selector    | Query selector identificando el elemento html                                                         | String   |     X    |
 | Response callback           | Callback para recibir el token                                                                        | function |     X    |
@@ -125,7 +130,7 @@ Ejecute esta función para solicitar la tokenización, esta función valida por 
 ```
 
 | Campo                                   | Descripción                                                                 | Tipo   | Requerido |
-| :-------------------------------------- | :-------------------------------------------------------------------------- |:------ | :------- |
+| :-------------------------------------- | :-------------------------------------------------------------------------- |:------: | :-------: |
 | locale                                  | Idioma a utilizar (pt, es, en)                                                | String |          |
 | user.id                                 | Identificador de cliente. Este es el identificador que usa dentro de su aplicación | String |      X   |
 | user.email                              | Correo electrónico del comprador, con formato de correo electrónico válido                                       | String |      X   |
