@@ -17,7 +17,7 @@ Deberá incluir la dependencia del SDK `payment_sdk_stable.min.js` en su página
 
 ## Uso
 
-Para ver ejemplos prácticos del uso del SDK de Payment Gateway JS, consulte lo siguiente: [ejemplos](https://github.com/globalpayredeban/pg-docs/tree/main/pg-js-sdk/examples).
+Para ver ejemplos prácticos del uso del SDK de Payment Gateway JS, consulte lo siguiente: [ejemplos](https://github.com/globalpayredeban/pg-docs/tree/master/pg-js-sdk/examples).
 
 ### Referencia de Tokenización
 Nuestra biblioteca le permite implementar de la manera fácil un formulario para tokenizar tarjetas con nosotros. Dicho formulario es dinámico y responde para cada tarjeta, es decir, implemente este formulario para cualquier tipo de tarjeta que admitamos.
@@ -100,7 +100,7 @@ Use los siguientes parametros:
 
 | Campo                       | Descripción                                                                                          | Tipo     | Requerido |
 | :-------------------------- | :--------------------------------------------------------------------------------------------------- |:-------- | :------- |
-| [Tokenize data](#Tokenizar-datos)|                                                                                                   | Object   |     X    |
+| [Tokenize data](#Datos-para-tokenizar)|                                                                                                   | Object   |     X    |
 | Container query selector    | Query selector identificando el elemento html                                                         | String   |     X    |
 | Response callback           | Callback para recibir el token                                                                        | function |     X    |
 | Incomplete form callback    | Callback para ejecutar cuando se solicita [tokenize](#Función-tokenize) pero el formulario está incompleto | function |     X    |
@@ -109,7 +109,7 @@ Use los siguientes parametros:
 ### Función Tokenize
 Ejecute esta función para solicitar la tokenización, esta función valida por defecto todos los datos establecidos por el cliente en el formulario. En caso de que los datos estén incompletos o sean incorrectos, se invocará la devolución de llamada del formulario incompleto.
 
-### Tokenizar datos
+### Datos para tokenizar
 
 ```javascript
     let tokenize_data = {
@@ -129,7 +129,7 @@ Ejecute esta función para solicitar la tokenización, esta función valida por 
 | locale                                  | Idioma a utilizar (pt, es, en)                                                | String |          |
 | user.id                                 | Identificador de cliente. Este es el identificador que usa dentro de su aplicación | String |      X   |
 | user.email                              | Correo electrónico del comprador, con formato de correo electrónico válido                                       | String |      X   |
-| configuration.default_country           | País en formato ISO 3166-1 Alpha 3                                        | String |          |
+| configuration.default_country           | País en formato ISO 3166-1 Alpha 3                                        | String |      X    |
 | configuration.icon_colour               | Color de los iconos                                                                 | String |          |
 | configuration.use_dropdowns             | Use menús desplegables para establecer la fecha de vencimiento de la tarjeta                               | String |          |
 | configuration.exclusive_types           | Definir tipos de tarjetas permitidos                                                  | String |          |
